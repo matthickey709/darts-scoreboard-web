@@ -28,10 +28,9 @@ const styles = StyleSheet.create({
     minHeight: 50
   },
   headerIcon: {
-    width: 48,
-    height: 48,
+    width: 24,
+    height: 24,
     marginLeft: 10,
-    tintColor: "#ffffff"
   },
   headerCenter: {
     flex: 1,
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
   },
   headerLeft: {
     order: 1,
-    width: 80
+    width: 25
   },
   headerRight: {
     order: 3,
