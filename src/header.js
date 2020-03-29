@@ -14,8 +14,8 @@ const Header = ({ onBack, title }) => (
 const styles = StyleSheet.create({
   headerContainer: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: '#ff4e3f',
-    backgroundColor: '#ff8179',
+    borderBottomColor: '#E3292E',
+    backgroundColor: '#E3292E',
   },
   header: {
     padding: 10,

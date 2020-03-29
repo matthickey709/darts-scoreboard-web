@@ -4,11 +4,12 @@ import {
   ActivityIndicator,
   StyleSheet
 } from "react-native";
-import UserList from "./user-list";
+import GameList from "./game-list";
+import dartGames from "./data/dartGames.json";
 
 class Home extends React.Component {
   state = {
-    users: [],
+    games: dartGames,
     loading: true
   };
   componentDidMount() {
@@ -16,9 +17,7 @@ class Home extends React.Component {
   }
 
   async getUsers() {
-      const res = await fetch("https://randomuser.me/api/?results=20");
-      const { results } = await res.json();
-      this.setState({users: [...results], loading: false});
+      this.setState({games: dartGames, loading: false});
   }
 
   render() {
@@ -27,11 +26,11 @@ class Home extends React.Component {
         {this.state.loading ? (
           <ActivityIndicator
             style={[styles.centering]}
-            color="#ff8179"
+            color="#E3292E"
             size="large"
           />
         ) : (
-          <UserList users={this.state.users} />
+          <GameList users={this.state.games} />
         )}
       </ScrollView>
     );
@@ -40,7 +39,7 @@ class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "whitesmoke"
+    backgroundColor: "rgba(249, 223, 188, 0.4)"
   },
   centering: {
     alignItems: "center",

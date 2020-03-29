@@ -1,15 +1,13 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
 
-const UserItem = ({ item: user }) => {
+const GameItem = ({ item: game }) => {
   return (
     <View style={styles.row}>
-      <Image style={styles.rowIcon} source={user.picture.medium} />
+      <Image style={styles.rowIcon} source={game.icon} />
       <View style={styles.rowData}>
-        <Text style={styles.rowDataText}>{`${user.name.title} ${
-          user.name.first
-        } ${user.name.last}`}</Text>
-        <Text style={styles.rowDataSubText}>{user.email}</Text>
+        <Text style={styles.rowDataText}>{game.name}</Text>
+        <Text style={styles.rowDataSubText}>{game.description}</Text>
       </View>
     </View>
   );
@@ -22,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 15,
     marginBottom: 5,
-    backgroundColor: "white",
+    backgroundColor: "#F9DFBC",
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: "rgba(0,0,0,0.1)"
   },
@@ -49,4 +47,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default UserItem;
+export default GameItem;
