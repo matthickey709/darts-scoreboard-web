@@ -104,12 +104,7 @@ class AroundTheWorld extends React.Component {
 
 const styles = StyleSheet.create({
     containerStyle: {
-        flexDirection: 'row',
         flexWrap: 'wrap'
-    },
-    scoreItemStyle: {
-        height: 100,
-        width: '50%'
     }
 });
 
