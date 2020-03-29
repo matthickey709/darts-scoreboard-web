@@ -5,8 +5,7 @@ import history from "./history"
 const GameItem = ({ item: game }) => {
 
   function chooseGame() {
-    console.log(game.name);
-    history.push('/Classic501')
+    history.push(game.path);
   }
 
   return (
