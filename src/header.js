@@ -1,12 +1,15 @@
 import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet, Image} from 'react-native';
+import {SafeAreaView, View, Text, StyleSheet, Image, TouchableHighlight} from 'react-native';
+import history from './history';
 
 const Header = ({ onBack, title }) => (
   <SafeAreaView style={styles.headerContainer}>
     <View style={styles.header}>
+    <TouchableHighlight onPress={() => history.push('/')}>
       <View style={styles.headerLeft}>
         <Image style={styles.headerIcon} source={require("./data/icons8-home-48.png")} />
       </View>
+    </TouchableHighlight>
       <View style={styles.headerCenter}>
         <Text accessibilityRole="heading" aria-level="3" style={styles.title}>{title}</Text>
       </View>
@@ -30,7 +33,6 @@ const styles = StyleSheet.create({
   headerIcon: {
     width: 24,
     height: 24,
-    marginLeft: 10,
   },
   headerCenter: {
     flex: 1,
@@ -38,7 +40,6 @@ const styles = StyleSheet.create({
   },
   headerLeft: {
     order: 1,
-    width: 25
   },
   headerRight: {
     order: 3,

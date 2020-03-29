@@ -1,31 +1,31 @@
 [
     {
         "name": "Classic 501 Darts",
-        "description": "foo",
+        "description": "Classic game of darts with a starting score of 501.",
         "icon": "./data/dartboard.png",
         "path": "/Classic501"
     },
     {
         "name": "Classic 301 Darts",
-        "description": "foo",
+        "description": "Classic game of darts with a starting score of 301.",
         "icon": "./data/dartboard.png",
         "path": "/Classic301"
     },
     {
         "name": "Baseball",
-        "description": "foo",
+        "description": "Aim for the number corresponding to the current inning to score.",
         "icon": "./data/dartboard.png",
         "path": "/Baseball"
     },
     {
         "name": "Around the World",
-        "description": "foo",
+        "description": "Start at 1 and work your way up to bullseye.",
         "icon": "./data/dartboard.png",
         "path": "/AroundTheWorld"
     },
     {
         "name": "Cricket",
-        "description": "foo",
+        "description": "Honestly idk",
         "icon": "./data/dartboard.png",
         "path": "/Cricket"
     }
