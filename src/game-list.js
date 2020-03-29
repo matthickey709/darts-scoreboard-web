@@ -2,10 +2,10 @@ import React from "react";
 import { FlatList } from "react-native";
 import GameItem from "./game-item";
 
-const GameList = ({ users }) => {
+const GameList = ({ games }) => {
   return (
     <FlatList
-      data={users}
+      data={games}
       renderItem={GameItem}
     />
   );

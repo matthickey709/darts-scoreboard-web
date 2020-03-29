@@ -13,10 +13,10 @@ class Home extends React.Component {
     loading: true
   };
   componentDidMount() {
-    this.getUsers();
+    this.getGames();
   }
 
-  async getUsers() {
+  async getGames() {
       this.setState({games: dartGames, loading: false});
   }
 
@@ -30,7 +30,7 @@ class Home extends React.Component {
             size="large"
           />
         ) : (
-          <GameList users={this.state.games} />
+          <GameList games={this.state.games} />
         )}
       </ScrollView>
     );
@@ -39,7 +39,7 @@ class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "rgba(249, 223, 188, 0.4)"
+    backgroundColor: "rgba(255, 255, 255, 0.4)"
   },
   centering: {
     alignItems: "center",

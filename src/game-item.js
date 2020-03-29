@@ -1,10 +1,17 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
+import history from "./history"
 
 const GameItem = ({ item: game }) => {
+
+  function chooseGame() {
+    console.log(game.name);
+    history.push('/Classic501')
+  }
+
   return (
-    <View style={styles.row}>
-      <Image style={styles.rowIcon} source={game.icon} />
+    <View style={styles.row} onClick={chooseGame}>
+      <Image style={styles.rowIcon} source={require( `${ game.icon }` )} />
       <View style={styles.rowData}>
         <Text style={styles.rowDataText}>{game.name}</Text>
         <Text style={styles.rowDataSubText}>{game.description}</Text>

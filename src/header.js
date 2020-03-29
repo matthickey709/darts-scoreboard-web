@@ -1,9 +1,12 @@
 import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, View, Text, StyleSheet, Image} from 'react-native';
 
 const Header = ({ onBack, title }) => (
   <SafeAreaView style={styles.headerContainer}>
     <View style={styles.header}>
+      <View style={styles.headerLeft}>
+        <Image style={styles.headerIcon} source={require("./data/icons8-home-48.png")} />
+      </View>
       <View style={styles.headerCenter}>
         <Text accessibilityRole="heading" aria-level="3" style={styles.title}>{title}</Text>
       </View>
@@ -23,6 +26,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     minHeight: 50
+  },
+  headerIcon: {
+    width: 48,
+    height: 48,
+    marginLeft: 10,
+    tintColor: "#ffffff"
   },
   headerCenter: {
     flex: 1,
