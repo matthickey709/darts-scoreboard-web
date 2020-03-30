@@ -13,7 +13,7 @@ const gameInfo = {
 export default class Routes extends Component {
     render() {
         return (
-            <HashRouter basename="/darts-scoreboard-web">
+            <HashRouter basename={window.location.pathname || ''}>
                 <Header title="Dart Games" />
                 <Switch>
                     <Route path="/" exact component={Home} />
