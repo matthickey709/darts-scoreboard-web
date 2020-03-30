@@ -1,21 +1,19 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { View, Image, Text, StyleSheet } from "react-native";
-import history from "./history"
 
 const GameItem = ({ item: game }) => {
 
-  function chooseGame() {
-    history.push(game.path);
-  }
-
   return (
-    <View style={styles.row} onClick={chooseGame}>
-      <Image style={styles.rowIcon} source={require( `${ game.icon }` )} />
-      <View style={styles.rowData}>
-        <Text style={styles.rowDataText}>{game.name}</Text>
-        <Text style={styles.rowDataSubText}>{game.description}</Text>
+    <Link to={game.path} style={{ textDecoration: 'none' }}>
+      <View style={styles.row}>
+        <Image style={styles.rowIcon} source={require(`${game.icon}`)} />
+        <View style={styles.rowData}>
+          <Text style={styles.rowDataText}>{game.name}</Text>
+          <Text style={styles.rowDataSubText}>{game.description}</Text>
+        </View>
       </View>
-    </View>
+    </Link>
   );
 };
 

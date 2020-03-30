@@ -4,14 +4,12 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import Header from './header'
 import Routes from './Routes';
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.appContainer}>
-        <Header title="Dart Games" />
         <Routes />
       </View>
     );

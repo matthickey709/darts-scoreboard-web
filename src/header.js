@@ -1,15 +1,18 @@
 import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet, Image, TouchableHighlight} from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
+import { Link } from 'react-router-dom';
 import history from './history';
 
 const Header = ({ onBack, title }) => (
   <SafeAreaView style={styles.headerContainer}>
     <View style={styles.header}>
-    <TouchableHighlight onPress={() => history.push('/')}>
-      <View style={styles.headerLeft}>
-        <Image style={styles.headerIcon} source={require("./data/icons8-home-48.png")} />
-      </View>
-    </TouchableHighlight>
+      <TouchableHighlight>
+        <Link to={"/"}>
+          <View style={styles.headerLeft}>
+            <Image style={styles.headerIcon} source={require("./data/icons8-home-48.png")} />
+          </View>
+        </Link>
+      </TouchableHighlight>
       <View style={styles.headerCenter}>
         <Text accessibilityRole="heading" aria-level="3" style={styles.title}>{title}</Text>
       </View>
