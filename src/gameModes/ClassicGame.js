@@ -1,20 +1,26 @@
 import React from "react";
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, Button } from "react-native";
+import ClassicPlayerScoreboard from './gameComponents/ClassicPlayerScoreboard';
 
 class ClassicGame extends React.Component {
-  state = {
-    startingScore: 999,
-    player1Status: {
-      score: 999,
-      legs: 0,
-      sets: 0
-    },
-    player2Status: {
-      score: 999,
-      legs: 0,
-      sets: 0
-    }
-  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      startingScore: 999,
+      player1Status: {
+        score: 999,
+        legs: 0,
+        sets: 0
+      },
+      player2Status: {
+        score: 999,
+        legs: 0,
+        sets: 0
+      },
+    };
+  }
 
   componentDidMount() {
     this.setState({
@@ -31,34 +37,83 @@ class ClassicGame extends React.Component {
       }
     });
   }
-  
+
   render() {
     return (
       <View style={styles.containerStyle}>
-        <FlatList />
+        <ClassicPlayerScoreboard
+          playerNumber={1}
+          legsValue={this.state.player1Status.legs}
+          setsValue={this.state.player1Status.sets}
+          scoreValue={this.state.player1Status.score}
+          startScoreInput={this.showInputModalCallback}
+        />
+        <ClassicPlayerScoreboard
+          playerNumber={2}
+          legsValue={this.state.player2Status.legs}
+          setsValue={this.state.player2Status.sets}
+          scoreValue={this.state.player2Status.score}
+          startScoreInput={this.showInputModalCallback}
+        />
       </View>
     );
   }
 
+  showInputModalCallback(playerNumber) {
+  }
+
   updatePlayerScore(recordedScore, isPlayer1Turn) {
     var playerScore;
-
-    if (isPlayer1Turn) {
-      // TODO
-    } else {
-      // TODO
+    if (this.isValidMove(recordedScore, isPlayer1Turn)) {
+      if (isPlayer1Turn) {
+        this.setState({
+          player1Status: {
+            score: this.state.player1Status.score - recordedScore
+          }
+        });
+        playerScore = this.state.player1Status.score;
+      } else {
+        this.setState({
+          player2Status: {
+            score: this.state.player2Status.score - recordedScore
+          }
+        });
+        playerScore = this.state.player1Status.score;
+      }
     }
 
     // If player wins, increase their legs/sets accordingly
     if (playerScore === 0) {
       this.updateLegsAndSets(isPlayer1Turn);
-      this.setState({player1Status: {
-        score: this.state.startingScore
-      }});
-      this.setState({player2Status: {
-        score: this.state.startingScore
-      }});
+      this.setState({
+        player1Status: {
+          score: this.state.startingScore
+        }
+      });
+      this.setState({
+        player2Status: {
+          score: this.state.startingScore
+        }
+      });
     }
+  }
+
+  isValidMove(recordedScore, isPlayer1Turn) {
+    if (recordedScore > 180) {
+      return false;
+    }
+    if (isPlayer1Turn) {
+      // Score cannot be greater than 180, and score cannot bring you to a negative number
+      if (this.state.player1Status.score - recordedScore < 0) {
+        return false;
+      }
+    } else {
+      if (this.state.player2Status.score - recordedScore < 0) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   updateLegsAndSets(isPlayer1Turn) {
@@ -112,7 +167,7 @@ class ClassicGame extends React.Component {
 
 const styles = StyleSheet.create({
   containerStyle: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     flexWrap: 'wrap'
   },
   scoreItemStyle: {
