@@ -4,15 +4,13 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import Home from './home'
-import Header from './header'
+import Routes from './Routes';
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.appContainer}>
-        <Header title="Dart Games" />
-        <Home />
+        <Routes />
       </View>
     );
   }
@@ -21,6 +19,7 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
+    backgroundColor: "rgba(249, 223, 188, 0.4)"
   },
 });
 

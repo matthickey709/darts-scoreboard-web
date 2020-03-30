@@ -1,7 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image, TouchableHighlight } from 'react-native';
 import { Link } from 'react-router-dom';
-import history from './history';
 
 const Header = ({ onBack, title }) => (
   <SafeAreaView style={styles.headerContainer}>
