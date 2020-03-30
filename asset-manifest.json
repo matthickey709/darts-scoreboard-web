@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/%7Bdarts-scoreboard-web%7D/static/css/main.fdf90669.chunk.css",
-    "main.js": "/%7Bdarts-scoreboard-web%7D/static/js/main.7173fa21.chunk.js",
-    "main.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/main.7173fa21.chunk.js.map",
+    "main.js": "/%7Bdarts-scoreboard-web%7D/static/js/main.ba141a69.chunk.js",
+    "main.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/main.ba141a69.chunk.js.map",
     "runtime-main.js": "/%7Bdarts-scoreboard-web%7D/static/js/runtime-main.c62b639f.js",
     "runtime-main.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/runtime-main.c62b639f.js.map",
     "static/js/2.60c4c095.chunk.js": "/%7Bdarts-scoreboard-web%7D/static/js/2.60c4c095.chunk.js",
     "static/js/2.60c4c095.chunk.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/2.60c4c095.chunk.js.map",
     "index.html": "/%7Bdarts-scoreboard-web%7D/index.html",
-    "precache-manifest.92c7398a8a8158b11d61164be5736435.js": "/%7Bdarts-scoreboard-web%7D/precache-manifest.92c7398a8a8158b11d61164be5736435.js",
+    "precache-manifest.34d086fd87642754300a8fc5cfda43e1.js": "/%7Bdarts-scoreboard-web%7D/precache-manifest.34d086fd87642754300a8fc5cfda43e1.js",
     "service-worker.js": "/%7Bdarts-scoreboard-web%7D/service-worker.js",
     "static/css/main.fdf90669.chunk.css.map": "/%7Bdarts-scoreboard-web%7D/static/css/main.fdf90669.chunk.css.map",
     "static/js/2.60c4c095.chunk.js.LICENSE.txt": "/%7Bdarts-scoreboard-web%7D/static/js/2.60c4c095.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.c62b639f.js",
     "static/js/2.60c4c095.chunk.js",
     "static/css/main.fdf90669.chunk.css",
-    "static/js/main.7173fa21.chunk.js"
+    "static/js/main.ba141a69.chunk.js"
   ]
 }
