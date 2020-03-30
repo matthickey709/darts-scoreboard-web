@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./home";
 import ClassicGame from "./gameModes/ClassicGame";
 import AroundTheWorld from "./gameModes/AroundTheWorld";
@@ -13,7 +13,7 @@ const gameInfo = {
 export default class Routes extends Component {
     render() {
         return (
-            <HashRouter basename={window.location.pathname || ''}>
+            <BrowserRouter basename="/darts-scoreboard-web">
                 <Header title="Dart Games" />
                 <Switch>
                     <Route path="/" exact component={Home} />
@@ -27,7 +27,7 @@ export default class Routes extends Component {
                     />
                     <Route path="/AroundTheWorld" component={AroundTheWorld} />
                 </Switch>
-            </HashRouter>
+            </BrowserRouter>
         )
     }
 }
