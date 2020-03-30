@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/%7Bdarts-scoreboard-web%7D/static/css/main.fdf90669.chunk.css",
+    "main.js": "/%7Bdarts-scoreboard-web%7D/static/js/main.0ffee712.chunk.js",
+    "main.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/main.0ffee712.chunk.js.map",
+    "runtime-main.js": "/%7Bdarts-scoreboard-web%7D/static/js/runtime-main.c62b639f.js",
+    "runtime-main.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/runtime-main.c62b639f.js.map",
+    "static/js/2.091f0720.chunk.js": "/%7Bdarts-scoreboard-web%7D/static/js/2.091f0720.chunk.js",
+    "static/js/2.091f0720.chunk.js.map": "/%7Bdarts-scoreboard-web%7D/static/js/2.091f0720.chunk.js.map",
+    "index.html": "/%7Bdarts-scoreboard-web%7D/index.html",
+    "precache-manifest.40ca2337ab6148a8014fdda61ce1a1fe.js": "/%7Bdarts-scoreboard-web%7D/precache-manifest.40ca2337ab6148a8014fdda61ce1a1fe.js",
+    "service-worker.js": "/%7Bdarts-scoreboard-web%7D/service-worker.js",
+    "static/css/main.fdf90669.chunk.css.map": "/%7Bdarts-scoreboard-web%7D/static/css/main.fdf90669.chunk.css.map",
+    "static/js/2.091f0720.chunk.js.LICENSE.txt": "/%7Bdarts-scoreboard-web%7D/static/js/2.091f0720.chunk.js.LICENSE.txt",
+    "static/media/dartboard.png": "/%7Bdarts-scoreboard-web%7D/static/media/dartboard.8773ac05.png",
+    "static/media/logo.svg": "/%7Bdarts-scoreboard-web%7D/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c62b639f.js",
+    "static/js/2.091f0720.chunk.js",
+    "static/css/main.fdf90669.chunk.css",
+    "static/js/main.0ffee712.chunk.js"
+  ]
+}
