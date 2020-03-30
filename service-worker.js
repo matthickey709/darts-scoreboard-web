@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/%7Bdarts-scoreboard-web%7D/precache-manifest.944cda09edf7d5273c14626d752987c5.js"
+  "/%7Bdarts-scoreboard-web%7D/precache-manifest.d53eda4d21d3f1c56e1b46aa6679ae7f.js"
 );
 
 self.addEventListener('message', (event) => {
