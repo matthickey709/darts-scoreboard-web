@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43d79d6e33f4398d897a340fde1334c3",
+    "revision": "ad78fffd1088046580410c4fe5eb47e2",
     "url": "/%7Bdarts-scoreboard-web%7D/index.html"
   },
   {
-    "revision": "6bc01f76cff70bfb85f2",
+    "revision": "952a2b294981113de7fc",
     "url": "/%7Bdarts-scoreboard-web%7D/static/css/main.fdf90669.chunk.css"
   },
   {
-    "revision": "7603c9cd514a45bc3ddb",
-    "url": "/%7Bdarts-scoreboard-web%7D/static/js/2.091f0720.chunk.js"
+    "revision": "0a81bad251960191472e",
+    "url": "/%7Bdarts-scoreboard-web%7D/static/js/2.adbda43e.chunk.js"
   },
   {
     "revision": "24b1e13cee46ff35d2b4566989fead9a",
-    "url": "/%7Bdarts-scoreboard-web%7D/static/js/2.091f0720.chunk.js.LICENSE.txt"
+    "url": "/%7Bdarts-scoreboard-web%7D/static/js/2.adbda43e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6bc01f76cff70bfb85f2",
-    "url": "/%7Bdarts-scoreboard-web%7D/static/js/main.0ffee712.chunk.js"
+    "revision": "952a2b294981113de7fc",
+    "url": "/%7Bdarts-scoreboard-web%7D/static/js/main.33094781.chunk.js"
   },
   {
     "revision": "91a4785af2e6ad0cc282",
