@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6cfb83723f31246d533ad557834f9426",
+    "revision": "5e4076686a7b6eacb863c05812c55089",
     "url": "/%7Bdarts-scoreboard-web%7D/index.html"
   },
   {
