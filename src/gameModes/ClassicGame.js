@@ -20,6 +20,8 @@ class ClassicGame extends React.Component {
         sets: 0
       },
     };
+
+    this.onSubmitScoreCallback = this.onSubmitScoreCallback.bind(this);
   }
 
   componentDidMount() {
@@ -46,43 +48,45 @@ class ClassicGame extends React.Component {
           legsValue={this.state.player1Status.legs}
           setsValue={this.state.player1Status.sets}
           scoreValue={this.state.player1Status.score}
-          startScoreInput={this.showInputModalCallback}
+          startScoreInput={this.onSubmitScoreCallback}
         />
         <ClassicPlayerScoreboard
           playerNumber={2}
           legsValue={this.state.player2Status.legs}
           setsValue={this.state.player2Status.sets}
           scoreValue={this.state.player2Status.score}
-          startScoreInput={this.showInputModalCallback}
+          startScoreInput={this.onSubmitScoreCallback}
         />
       </View>
     );
   }
 
-  showInputModalCallback(playerNumber) {
+  isInteger(n) {
+    return n === parseInt(n, 10);
+  }
+
+  onSubmitScoreCallback(recordedScore, playerNumber) {
+    this.updatePlayerScore(recordedScore, playerNumber === 1);
   }
 
   updatePlayerScore(recordedScore, isPlayer1Turn) {
     var playerScore;
+    var status;
     if (this.isValidMove(recordedScore, isPlayer1Turn)) {
       if (isPlayer1Turn) {
-        this.setState({
-          player1Status: {
-            score: this.state.player1Status.score - recordedScore
-          }
-        });
+        status = { ...this.state.player1Status };
+        status.score = status.score - recordedScore;
+        this.setState({ player1Status: status });
         playerScore = this.state.player1Status.score;
       } else {
-        this.setState({
-          player2Status: {
-            score: this.state.player2Status.score - recordedScore
-          }
-        });
-        playerScore = this.state.player1Status.score;
+        status = { ...this.state.player2Status };
+        status.score = status.score - recordedScore;
+        this.setState({ player2Status: status });
+        playerScore = this.state.player2Status.score;
       }
     }
 
-    // If player wins, increase their legs/sets accordingly
+    // If player wins, increase their legs / sets accordingly
     if (playerScore === 0) {
       this.updateLegsAndSets(isPlayer1Turn);
       this.setState({
@@ -99,7 +103,7 @@ class ClassicGame extends React.Component {
   }
 
   isValidMove(recordedScore, isPlayer1Turn) {
-    if (recordedScore > 180) {
+    if (recordedScore > 180 || recordedScore < 0) {
       return false;
     }
     if (isPlayer1Turn) {
@@ -118,47 +122,33 @@ class ClassicGame extends React.Component {
 
   updateLegsAndSets(isPlayer1Turn) {
     var legCount;
+    var statusOne = { ...this.player1Status };
+    var statusTwo = { ... this.player2Status };
     if (isPlayer1Turn) {
-      legCount = this.state.player1Status.sets;
-      if (this.state.player1Status.legs === 2) {
-        // If player has 2 legs won, increase their sets.
-        this.setState({
-          player1Status: {
-            sets: legCount + 1,
-            legs: 0
-          },
-          player2Status: {
-            legs: 0
-          }
-        });
+      legCount = this.state.player1Status.legs;
+      if (legCount === 2) {
+        // If player gets to 3 legs won, increase their sets, reset all legs.
+        statusOne.sets = statusOne.sets + 1;
+        statusOne.legs = 0;
+        statusTwo.legs = 0;
+        this.setState({ player1Status: statusOne, playerTwoStatus: statusTwo });
       } else {
         // Increase player's leg count
-        this.setState({
-          player1Status: {
-            legs: legCount + 1
-          }
-        });
+        statusOne.legs = legCount + 1;
+        this.setState({ player1Status: statusOne });
       }
     } else {
-      legCount = this.state.player2Status.sets;
+      legCount = this.state.player2Status.legs;
       if (this.state.player2Status.legs === 2) {
-        // If player has 2 legs won, increase their sets.
-        this.setState({
-          player1Status: {
-            legs: 0
-          },
-          player2Status: {
-            sets: legCount + 1,
-            legs: 0
-          }
-        });
+        // If player gets to 3 legs won, increase their sets, reset all legs.
+        statusOne.legs = 0;
+        statusTwo.legs = 0;
+        statusTwo.sets = statusTwo.sets + 1;
+        this.setState({ player1Status: statusOne, player2Status: statusTwo });
       } else {
         // Increase player's leg count
-        this.setState({
-          player2Status: {
-            legs: legCount + 1
-          }
-        });
+        statusTwo.legs = legCount + 1;
+        this.setState({ player2Status: statusTwo });
       }
     }
   }

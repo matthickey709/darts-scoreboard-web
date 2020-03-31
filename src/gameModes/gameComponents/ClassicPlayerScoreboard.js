@@ -6,8 +6,16 @@ class ClassicPlayerScoreboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playerNumber: props.playerNumber
+            playerNumber: props.playerNumber,
+            enteredScore: ""
         }
+
+        this.submitAndClear = this.submitAndClear.bind(this);
+    }
+
+    submitAndClear() {
+        this.props.startScoreInput(this.state.enteredScore, this.state.playerNumber);
+        this.setState({ enteredScore: "" });
     }
 
     render() {
@@ -23,11 +31,14 @@ class ClassicPlayerScoreboard extends React.Component {
                     <TextInput
                         keyboardType="number-pad"
                         style={styles.input}
+                        value={this.state.enteredScore}
                         placeholder="Enter round score..."
+                        onChangeText={(text) => this.setState({ enteredScore: text })}
                     />
                     <Button
                         title="Submit"
                         color={global.dartboardGreen}
+                        onPress={() => this.submitAndClear()}
                     />
                 </ View>
 
