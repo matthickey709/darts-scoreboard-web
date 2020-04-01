@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
         textTransform: "capitalize",
         color: global.mainTextColor,
         textAlign: "center",
-        backgroundColor: global.dartboardCork
+        backgroundColor: global.dartboardCork,
+        padding: 20
     },
     input: {
         flex: 1,
