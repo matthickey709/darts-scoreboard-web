@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f993eaffff8346fdee927475569488a5",
+    "revision": "1495981865c1f986692171860546b550",
     "url": "/darts-scoreboard-web/index.html"
   },
   {
-    "revision": "8ec4ad93977acdc4d23d",
+    "revision": "643d978dd876fbc0dff5",
     "url": "/darts-scoreboard-web/static/css/main.fdf90669.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/darts-scoreboard-web/static/js/2.d4223233.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8ec4ad93977acdc4d23d",
-    "url": "/darts-scoreboard-web/static/js/main.56df526a.chunk.js"
+    "revision": "643d978dd876fbc0dff5",
+    "url": "/darts-scoreboard-web/static/js/main.79094da6.chunk.js"
   },
   {
     "revision": "97ca94d4a8644ca76c82",
