@@ -50,7 +50,7 @@ class ClassicGame extends React.Component {
   }
 
   onSubmitScoreCallback(recordedScore, playerNumber) {
-    this.updatePlayerScore(recordedScore, playerNumber === 1);
+    this.updatePlayerScore(Number(recordedScore), playerNumber === 1);
   }
 
   updatePlayerScore(recordedScore, isPlayer1Turn) {
@@ -65,22 +65,22 @@ class ClassicGame extends React.Component {
         status.score = status.score - recordedScore;
         this.setState({ player2Status: status });
       }
-    }
 
-    // If player wins, increase their legs / sets accordingly
-    if (status.score === 0) {
-      var statusOne = { ...this.state.player1Status };
-      var statusTwo = { ...this.state.player2Status };
-      statusOne.score = this.state.startingScore;
-      statusTwo.score = this.state.startingScore;
-      this.setState(
-        { player1Status: statusOne, player2Status: statusTwo },
-        () => this.updateLegsAndSets(isPlayer1Turn));
+      // If player wins, increase their legs / sets accordingly
+      if (status.score === 0) {
+        var statusOne = { ...this.state.player1Status };
+        var statusTwo = { ...this.state.player2Status };
+        statusOne.score = this.state.startingScore;
+        statusTwo.score = this.state.startingScore;
+        this.setState(
+          { player1Status: statusOne, player2Status: statusTwo },
+          () => this.updateLegsAndSets(isPlayer1Turn));
+      }
     }
   }
 
   isValidMove(recordedScore, isPlayer1Turn) {
-    if (recordedScore > 180 || recordedScore < 0) {
+    if (recordedScore > 180 || recordedScore < 0 || !Number.isInteger(recordedScore)) {
       return false;
     }
     if (isPlayer1Turn) {
