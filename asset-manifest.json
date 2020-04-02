@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/darts-scoreboard-web/static/css/main.fdf90669.chunk.css",
-    "main.js": "/darts-scoreboard-web/static/js/main.79094da6.chunk.js",
-    "main.js.map": "/darts-scoreboard-web/static/js/main.79094da6.chunk.js.map",
+    "main.js": "/darts-scoreboard-web/static/js/main.b015865b.chunk.js",
+    "main.js.map": "/darts-scoreboard-web/static/js/main.b015865b.chunk.js.map",
     "runtime-main.js": "/darts-scoreboard-web/static/js/runtime-main.0a5e6e0a.js",
     "runtime-main.js.map": "/darts-scoreboard-web/static/js/runtime-main.0a5e6e0a.js.map",
     "static/js/2.d4223233.chunk.js": "/darts-scoreboard-web/static/js/2.d4223233.chunk.js",
     "static/js/2.d4223233.chunk.js.map": "/darts-scoreboard-web/static/js/2.d4223233.chunk.js.map",
     "index.html": "/darts-scoreboard-web/index.html",
-    "precache-manifest.c7de4a2a55aa03f74243d55051a833d9.js": "/darts-scoreboard-web/precache-manifest.c7de4a2a55aa03f74243d55051a833d9.js",
+    "precache-manifest.01d75a94474f3a6facbf91bb4aa45ca4.js": "/darts-scoreboard-web/precache-manifest.01d75a94474f3a6facbf91bb4aa45ca4.js",
     "service-worker.js": "/darts-scoreboard-web/service-worker.js",
     "static/css/main.fdf90669.chunk.css.map": "/darts-scoreboard-web/static/css/main.fdf90669.chunk.css.map",
     "static/js/2.d4223233.chunk.js.LICENSE.txt": "/darts-scoreboard-web/static/js/2.d4223233.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.0a5e6e0a.js",
     "static/js/2.d4223233.chunk.js",
     "static/css/main.fdf90669.chunk.css",
-    "static/js/main.79094da6.chunk.js"
+    "static/js/main.b015865b.chunk.js"
   ]
 }
