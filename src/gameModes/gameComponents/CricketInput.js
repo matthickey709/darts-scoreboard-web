@@ -6,8 +6,6 @@ class CricketInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playerNumber: props.playerNumber,
-            hitNumbers: ""
         }
     }
 
