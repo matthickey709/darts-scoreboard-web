@@ -25,7 +25,7 @@
     },
     {
         "name": "Cricket",
-        "description": "Honestly idk",
+        "description": "Close out 15-20 and bullseye where highest total points wins.",
         "icon": "./data/dartboard.png",
         "path": "/Cricket"
     }
