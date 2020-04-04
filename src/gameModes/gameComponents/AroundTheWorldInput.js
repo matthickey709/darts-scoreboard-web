@@ -5,7 +5,7 @@ import "../../global";
 class AroundTheWorldInput extends React.Component {
     render() {
         return (
-            <View style={styles.row}>
+            <View style={styles.column}>
                 <Button
                     title="Increase"
                     onPress={() => this.props.increaseScoreCallback(this.props.playerNumber)}
@@ -24,7 +24,7 @@ class AroundTheWorldInput extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    row: {
+    column: {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",

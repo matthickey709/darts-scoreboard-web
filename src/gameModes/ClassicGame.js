@@ -99,7 +99,7 @@ class ClassicGame extends React.Component {
 
   updateLegsAndSets(isPlayer1Turn) {
     var statusOne = { ...this.state.player1Status };
-    var statusTwo = { ... this.state.player2Status };
+    var statusTwo = { ...this.state.player2Status };
     if (isPlayer1Turn) {
       if (statusOne.legs === 2) {
         // If player gets to 3 legs won, increase their sets, reset all legs.
