@@ -4,7 +4,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import Routes from './Routes';
+import Routes from './src/Routes';
 
 class App extends React.Component {
   render() {
